@@ -4,10 +4,11 @@ import Contacts from "./pages/Contacts";
 import Projects from "./pages/Projects";
 import Certifications from "./pages/Certifications";
 import Gallery from "./pages/Gallery";
-
+import Header from "./components/Header";
 function App() {
   return (
     <div className="app">
+      <Header />
       <main>
         <Routes>
           <Route path="/" element={<Main />} />
