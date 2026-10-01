@@ -5,11 +5,12 @@ import Projects from "./pages/Projects";
 import Certifications from "./pages/Certifications";
 import Gallery from "./pages/Gallery";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 function App() {
   return (
     <div className="app">
       <Header />
-      <main>
+      <main className="main">
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/galeria" element={<Gallery />} />
@@ -18,6 +19,7 @@ function App() {
           <Route path="/contato" element={<Contacts />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }
