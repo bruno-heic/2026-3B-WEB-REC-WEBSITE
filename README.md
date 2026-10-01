@@ -1,16 +1,69 @@
-# React + Vite
+# Digital Project: Website de Arquitetura
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Recriação do site de uma empresa de arquitetura, feita a partir de um protótipo do Figma, usando **React + Vite + React Router**. O projeto foi desenvolvido como atividade em grupo, com foco em fidelidade ao layout, componentização e organização das rotas.
 
-Currently, two official plugins are available:
+**Protótipo:** [Website of Architects (Figma Community)](https://www.figma.com/community/file/891374608655348853/website-of-architects-free-website)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Integrantes
 
-## React Compiler
+- Agno Souza Seles Junior
+- Bruno Souza Guerra
+- Guilherme Carvalho do Santos
+- ""
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologias
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [React Router](https://reactrouter.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- CSS puro (Flexbox e CSS Grid)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Rotas
+
+| Rota            | Página              | Descrição                                                          |
+| --------------- | ------------------- | ------------------------------------------------------------------ |
+| `/`             | Home                | Destaque, sobre, missão, prévia dos projetos e formulário de contato |
+| `/projetos`     | Projetos            | Lista com todos os projetos da empresa                             |
+| `/projetos/:id` | Detalhes do Projeto | Rota dinâmica: exibe o projeto correspondente ao `id` da URL       |
+| `/sobre`        | Sobre               | Apresentação da empresa                                            |
+| `/contato`      | Contato             | Informações e formulário de contato                                |
+
+A rota `/projetos/:id` usa o hook `useParams` para ler o `id` da URL e buscar o projeto no arquivo de dados (`src/data/projects.js`). Se o `id` não existir, a página exibe uma mensagem de "Projeto não encontrado" com um link para voltar.
+
+## Funcionalidades
+
+- Navegação entre páginas com `Link` e rotas definidas com React Router
+- Rota dinâmica para os detalhes de cada projeto
+- Componentes reutilizáveis (Header, Footer e botões)
+- Lista de projetos gerada a partir de um array de dados com `map`
+- Formulário de contato com campos obrigatórios e validação do navegador
+- Footer sempre posicionado ao final da página
+- Layout feito com Flexbox e CSS Grid, seguindo o protótipo do Figma
+
+## Como executar
+
+**Pré-requisito:** Node.js 18 ou superior.
+
+```bash
+# 1. Clonar o repositório
+git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
+
+# 2. Entrar na pasta
+cd NOME-DO-REPOSITORIO
+
+# 3. Instalar as dependências
+npm install
+
+# 4. Rodar em modo de desenvolvimento
+npm run dev
+```
+
+O terminal mostra o endereço, normalmente `http://localhost:5173`.
+
+Outros comandos:
+
+```bash
+npm run build     # gera a versão de produção na pasta dist/
+npm run preview   # serve localmente a versão gerada pelo build
+```
